@@ -180,118 +180,6 @@ $reqb = mysql_query($sqlb) or die('<div id="error">Erreur SQL !<br>'.$sqlb.'<br>
 mysql_close();
 }
 
-if (isset($_POST['addmatchFromFile']))
-{
-	$fp = fopen("cal.txt",'w');
-	fwrite($fp, $_POST['text']);
-	fclose($fp);
-	$rf = fopen("cal.txt", 'r');
-	$sam = 0;
-	$dim = 0;
-	$i = 0;
-	while (!feof($rf))
-		{
-		$line = fgets($rf);
-		if (substr($line, 0, 4) == "Week"){
-			$substring = strpbrk($line, "0123456789");
-			$sam = substr($substring, 0, 2);
-			$dim = substr($substring, 3, 2);
-
-			$month = substr($substring, 6, 4);
-			switch ($month){
-			case 'Janv':
-				$m = 1;
-			break;
-			case 'Févr':
-				$m = 2;
-			break;
-			case 'Mars':
-				$m = 3;
-			break;
-			case 'Avri':
-				$m = 4;
-			break;
-			case 'Mai ':
-				$m = 5;
-			break;
-			case 'Juin':
-				$m = 6;
-			break;
-			case 'Juil':
-				$m = 7;
-			break;
-			case 'Aout':
-				$m = 8;
-			break;
-			case 'Sept':
-				$m = 9;
-			break;
-			case 'Octo':
-				$m = 10;
-			break;
-			case 'Nove':
-				$m = 11;
-			break;
-			case 'Déce':
-				$m = 12;
-			break;		
-			}
-			$y = substr($substring, -6, 4);
-			}
-		else if (ereg("walhain|Walhain", $line)){
-			$i++;
-			if (substr($line, 13, 2) == 'SA') $day = $sam;
-			else
-			{
-				if (!is_numeric($dim))
-				{
-					$dim = 1;
-					if($m != 12) $m++; else $m = 1;
-				}
-				$day = $dim;
-			}
-			$hour = substr($line, 17, 2);
-			$min = substr($line, 20, 2);
-			$teams = substr($line, 23);
-			$locVis = explode("\t- \t", $teams);
-			if(ereg("walhain|Walhain", $locVis[0])) $local = "Walhain"; else $local = $locVis[0];
-			if(ereg("walhain|Walhain", $locVis[1])) $visitor = "Walhain"; else $visitor = $locVis[1];
-			$date = (int)$y."-".(int)$m."-".(int)$day;
-			$d = date("w",mktime(0, 0, 0, (int)$m , (int)$day, (int)$y));
-			switch ($d) {
-				case 0:
-					$day = 'Di';
-					break;
-				case 1:
-					$day = 'Lu';
-					break;
-				case 2:
-					$day = 'Ma';
-					break;
-				case 3:
-					$day = 'Me';
-					break;
-				case 4:
-					$day = 'Je';
-					break;
-				case 5:
-					$day = 'Ve';
-					break;
-				case 6:
-					$day = 'Sa';
-					break;
-			}
-			//echo "$day $date &agrave; $hour h $min : $local - $visitor<br>";
-			$sql = "INSERT INTO matches VALUES ('','".$_POST['division']."','".$day."','".$hour."h".$min."','".$local."','".$visitor."','0','0','".$date."','','0')";
-			$req = mysql_query($sql) or die("<div id=\"alert\">Erreur SQL !<br>".$sql."<br>".mysql_error()."</div>");
-		
-		}
-	}
-echo '<div id="info"><p>'.$i.' matches ajout&eacute;s &agrave; la base de donn&eacute;es</p></div>';
-fclose($rf);
-mysql_close();
-}
-
 if (isset($_POST['addManyMatch'])){
 include("connection.php");
 for ($i=1; $i<$_POST['numMatches']+1; $i++) {
@@ -641,7 +529,8 @@ else {echo '<div id="info"><p>Les informations de l\'&eacute;quipe '.$_POST['div
 if(isset($_POST['addPlayerToTeamConfirm'])){
 include("connection.php");
 $sql = "UPDATE membres SET `equipe`='".$_GET['eq']."' WHERE id='".$_POST['id']."'";
-$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());echo '<div id="info"><p>Joueur ajout&eacute; &agrave; l\'&eacute;quipe</p></div>';
+$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+echo '<div id="info"><p>Joueur ajout&eacute; &agrave; l\'&eacute;quipe</p></div>';
 }
 
 
@@ -754,7 +643,7 @@ mysql_close();
 </div></div>
 
 <div id="addmatchesfromfile" style="display:none;"><div><h1>Ajouter des matches par copier/coller</h1>
-<form method="post" action="equipes.php">
+<form method="post" action="addmatch.php">
 <p>Pour quelle équipe ?
 <select name="division">
 <? include("connection.php");
