@@ -1,0 +1,175 @@
+* {
+	/* Reset browsers default margin, padding and font sizes */
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+	background-color :#aca8a1;
+	height: 100%;
+	margin-bottom: 1px;
+}
+
+
+body {
+	background-color :#aca8a1;
+}
+
+
+#topheader { width : 950px; position:relative; top : 1px;height : 50px; background : #fff url('images/cadre2/cadre_top.gif') no-repeat; margin : auto; margin-top : 20px;}
+
+#container {
+	width : 898px;
+	min-height : 500px;
+	margin : auto; margin-top : 0px;
+	background : #fff;
+	border-left : 1px solid #6b6b6b; border-right : 1px solid #6b6b6b;
+}
+
+#bottombox {
+	width : 900px;
+	height : 14px;
+	background : #989898 url('images/cadre2/cadre_bottom.gif') no-repeat;
+	margin : auto;
+	margin-bottom : 20px;
+}
+
+#footnote { color : white; font-size : .7em; margin-top : -10px; margin-bottom : 10px;text-align : center;}
+
+/*********************************************************
+*
+*		Début des définitions générales
+*
+*********************************************************/
+
+#maincontent {
+	width : 860px;
+	margin : auto;
+	margin-top : 0px;
+	padding : 0px 0px 20px 0px;
+	font-family : sans-serif;
+	color: #536482;
+	font-size: 10px;
+}
+
+#rightcol {
+	float : right;
+	background-color : white;
+	font-size : 1.1em;
+	text-align : right;
+	margin : -10px 5px 0px 0px;
+}
+
+
+#leftcol {
+	border-right : 0px dotted #c9c9c9;
+	font-size: 1.2em;
+	text-align : left;
+	background-color : white;
+	margin-right : 255px;
+	padding : 0px 0px 10px 20px;
+	min-height : 600px;
+}
+
+#leftcol h1 { position : relative; left : -10px;border-bottom : 0px solid #c9690c; width : 100%;}
+
+#onecolumn {
+	width  : 800px;
+	margin : 0px 0px 20px 0px;
+	padding : 0px 30px 10px 40px;
+	font-size : 1.2em;
+	text-align : left;
+}
+
+
+
+a { text-decoration : none; color : #105289;}
+a:hover { text-decoration : underline; color : #D31141;}
+a:active { color: #368AD2; }
+
+
+h1 {
+	color : #c9690c;
+	font-size : 1.5em;
+	margin-bottom : 20px;
+	margin-top :  25px;
+	font-weight : normal;
+	font-family : Verdana, Helvetica, Arial, sans-serif;
+}
+
+.rightitem h1 { text-align : center; color : #183a5c; font-size : 1.1em; border-top : 1px solid #183a5c; border-bottom : 1px solid #183a5c; padding-top : 4px; padding-bottom : 4px; width : 100%;margin-top:10px;}
+
+.rightitem {
+	background-color : #cadceb;
+	color : #183a5c;
+	width : 210px;
+	margin-bottom :0px;
+	margin-top : 30px;
+	text-align : left;
+	padding: 0 10px;
+}
+
+
+.rightitem ul { list-style : square; padding-left : 30px; padding-bottom : 10px;}
+
+p {
+	line-height: 1.3em;
+	font-size: 1.1em;
+	margin-bottom: 1.5em;
+}
+
+.centered { margin-top : 50px; line-height : 1.5em; text-align :center;}
+.rightalign { float : right; }
+
+
+span.corners-top, span.corners-bottom, span.corners-top span, span.corners-bottom span {
+	font-size: 1px;
+	line-height: 1px;
+	display: block;
+	height: 5px;
+	background-repeat: no-repeat;
+}
+
+span.corners-top {
+	background-position: 0 0;
+	margin: 0 -10px;
+	background-image: url("images/forum/corners_left.png");
+}
+
+span.corners-top span {
+	background-position: 100% 0;
+	background-image: url("images/forum/corners_right.png");
+}
+
+span.corners-bottom {
+	background-position: 0 100%;
+	clear: both;
+	background-image: url("images/forum/corners_left.png");
+	margin: 0 -10px;
+}
+
+span.corners-bottom span {
+	background-image: url("images/forum/corners_right.png");
+	background-position: 100% 100%;
+}
+
+.gallery ul {
+  list-style: none;
+}
+.gallery ul li {
+  display: inline;
+  padding: 5px;
+  margin-top : 5px;
+}
+p#gallery { font-size : 8px; }
+p#gallery a { text-decoration : none; border : 0; }
+p#gallery a:hover { border : 0; }
+p#gallery img {border:0;}
+
+/*********************************************************
+*
+*		Fin des définitions générales
+*
+*********************************************************/
+

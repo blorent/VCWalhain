@@ -1,0 +1,291 @@
+#login {
+	margin : 0px 25px 0px 0px;
+	font-size : .95em;
+}
+
+#login p { 
+	background : url("../images/user.png") no-repeat right;
+	padding : 5px 15px 3px 1px;
+	width : 100%;
+	text-align : right;
+}
+
+#login a { margin-right : 0px;}
+#login a:hover { text-decoration : none;}
+
+#tablematch { margin-bottom  : 10px;width : 100%; text-align : left; padding : 0;}
+
+#tablematch table
+{
+	border-collapse : collapse;
+	line-height : 2em;
+	margin-left : 0;
+	width : 85%;
+	font-size : .9em;
+	
+}
+#tablematch td
+{
+	border : 1px solid;
+	border-color  : #ccc;
+	text-align : center;
+	font-size : 1.1em;
+	padding : 3px;
+}
+
+#tablematch th
+{
+	border : 1px solid;
+	border-color  : #ccc;
+	font-size : 1.2em;
+	text-align : center;
+	background-color : white;
+
+}
+
+/* + -----------------------------------------------------
+	Styles appliqués au Calendrier
++ ----------------------------------------------------- */
+
+#calendar { text-align : center;}
+#calendar ul {padding-left : 0px; padding-bottom : 0px;}
+
+#calendrier li{
+	list-style: none;	
+}
+
+#libelle {
+	width: 203px;
+	margin: 0 auto;
+	padding: 0;
+	font-weight : bold;
+}
+.ligne {
+	width: 203px;
+	margin: 0 auto;
+	padding: 0;
+	height : 20px;
+} 
+#libelle li {
+	list-style : none;
+	float : left;
+	width : 29px; 
+}
+.ligne li {
+	list-style : none;
+	color: #000;
+	float : left; 
+	width : 29px; 
+}
+
+.ligne li a:hover{
+	list-style: none;
+	text-decoration: none;
+}
+
+
+li.itemCurrentItem {
+}
+li.itemSelectedItem {
+}		
+
+a.info {
+position: relative;
+text-decoration: none;
+color: #2e2ea0;
+border-bottom: 1px gray dotted;
+}
+
+a.info em {
+    display:none;
+	z-index : 10;
+}
+a.info:hover {
+    border: 0;
+    position: relative;
+    z-index: 500;
+    text-decoration:none;
+}
+a.info:hover em {
+    font-style: normal;
+    text-align : center;
+    display: block;
+    position: absolute;
+    font-size : .9em;
+    top: 20px;
+    left: -210px;
+    padding: 4px;padding-bottom : -8px;
+    color: #000;
+    border: 1px solid #63B06B;
+    background-color : #95c99a;
+    width:220px;
+    line-height : 1em;
+}
+a.info:hover em span {
+    position: absolute;
+    top: -7px;
+    left: 185px;
+    height: 7px;
+    width: 11px;
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+a.withEvent { color : #FF7070;position: relative;text-decoration: none;border-bottom: 1px gray dotted;}
+a.withEvent em {
+    display:none;
+	z-index : 10;
+}
+a.withEvent:hover {
+    border: 0;
+    position: relative;
+    z-index: 500;
+    text-decoration:none;
+}
+a.withEvent:hover em {
+    font-style: normal;
+    text-align : center;
+    display: block;
+    position: absolute;
+    font-size : .9em;
+    top: 20px;
+    left: -210px;
+    padding: 7px;
+    color: #000;
+    border: 1px solid #63B06B;
+    background-color : #95c99a;
+    width:220px;
+    line-height : 1em;
+}
+a.withEvent:hover em span {
+    position: absolute;
+    top: -7px;
+    left: 185px;
+    height: 7px;
+    width: 11px;
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+#info {
+        background-color : #aaaaff;
+        border : 1px solid #0000ff;
+	text-align : center;
+	color : black;
+	margin-bottom : 20px;
+	padding-top : 10px;
+}
+
+#error {
+        background-color : #ffaaaa;
+	color : black;
+        border : 1px solid red;
+	text-align : left;
+	margin-bottom : 5px;
+	padding-left : 10px;
+	padding-top : 10px; padding-bottom : 10px;
+	margin-bottom : 20px;
+}
+#error ul { padding-left : 40px;}
+#news { margin-bottom : 20px; padding-left : 40px; }
+
+#fiche { margin-top : 55px; margin-left : 55px;}
+
+#fiche img { float : right; border : 1px solid #ccc; margin-right : 120px;}
+
+/* Admin */
+
+#adminalert { padding : 15px; color : black; border : 1px solid #8F7200; background-color : #FFE375; margin-bottom : 30px;}
+#adminalert ul { list-style : none; padding-left : 30px;}
+#adminalert ul li.form { position : relative; top : -20px; left : 250px;display:block;}
+
+
+/* Page Beach */
+
+
+#zoom { float : right; padding : 20px; width : 400px; height : 300px;text-align:right; border-left : 1px dotted #c9c9c9;}
+#zoom img { width : 380px; border:none;}
+#thumbs {  text-align : left;}
+#thumbs img { margin : 5px; border : 1px solid white;}
+#thumbs img:hover { border : 1px solid #d02626;}
+
+/* Page d'index */
+
+#news {padding : 20px 40px 20px 40px;}
+.date { background : url('../images/icons/cal.png') no-repeat 0 0; display : inline;padding : 10px 3px 16px 7px;color : black;position : relative; left : -5px;float:left;}
+.date span {font-size : 8px; position : relative; left : -19px; top : -15px;} 
+.newsitem { margin-bottom : 10px;  padding-bottom : 10px; margin-right : 25px;margin-bottom : 20px;}
+.newstext { padding : 7px 0 0 0;border-top : 1px solid #ca5444;}
+
+/* Liens */
+p.linkdesc { font-style : italic; font-size : .9em; color : #8998B3; padding-left : 50px;margin-top : 5px;}
+p.links { padding-left : 35px;margin-top : 15px;margin-bottom : 0px;}
+p.links a img {border: 0;}
+p.links form { display : block;}
+
+/* Contact */
+
+.contact
+{
+	border: 1px solid ; border-color : #2e2ea0;
+	font-size : 11px;
+	width : 255px;
+	height : 150px;
+	padding : 6px;
+}
+
+
+#mail { margin-top : 35px; margin-bottom : 35px; line-height : 1.5em; margin-left : 40px;}
+#comite { padding-left  : 40px;}
+#comite h3
+{
+border : 0px;
+}
+
+#conception { padding-left  : 40px; }
+#conception h4 {
+	margin-top : 35px;
+	padding-left : -10px;
+}
+
+#map {
+ 	width:500px;
+ 	height:300px;
+ 	text-align:center;
+ 	border : 1px solid #2e2ea0;
+ 	margin : auto;
+ 	margin-bottom : 15px;
+ }
+
+#adressepic { float : right; margin : 30px; margin-bottom : 50px; position : relative; top : 20px; right : 20px;}
+
+#adresse
+{
+	font-size : 13px;
+	padding-left : 40px;
+	padding-bottom : 10px;
+	}
+	
+#adresse a 
+{
+	color : #2e2ea0;
+}
+	
+#adresse ul
+{
+	list-style-type : circle;
+}
+
+
+#photoAlbum img
+{
+	margin : 15px;
+}
+
+
+
+
+
+

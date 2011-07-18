@@ -1,0 +1,28 @@
+#map {
+ 	width:500px;
+ 	height:300px;
+ 	text-align:center;
+ 	border : 1px solid #2e2ea0;
+ 	margin : auto;
+ 	margin-bottom : 15px;
+ }
+
+#adressepic { float : right; margin : 30px; margin-bottom : 50px; position : relative; top : 20px; right : 20px;}
+
+#adresse
+{
+	font-size : 13px;
+	padding-left : 10px;
+	padding-bottom : 10px;
+	}
+	
+#adresse a 
+{
+	color : #2e2ea0;
+}
+	
+#adresse ul
+{
+	list-style-type : circle;
+}
+

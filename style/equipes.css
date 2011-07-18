@@ -1,0 +1,36 @@
+#dujour {
+	text-align : center;
+	text-decoration : none;
+}
+
+#dujour img  { width : 100px; }
+#dujour a img { border : 0;}
+
+#equipes_content
+{
+	font-size : 1em;
+}
+
+
+#equipes_content img
+{
+	margin-left : 100px;margin-bottom : 30px;
+	width : 380px;
+} 
+
+#equipes_content ul
+{
+	font-size : 1em;
+	text-transform: capitalize;
+}
+
+#equipes_content li { font-size : 1em; list-style : none;}
+
+#equipes_content a
+{
+}
+
+#equipes_content table { width : 100%; padding-left : 30px; text-align : left;}
+#equipes_content td { padding-left : 30px;} 
+
+#compo { float : left;margin-right : 70px;}

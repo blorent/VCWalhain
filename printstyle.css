@@ -1,0 +1,39 @@
+body
+{
+   width : 100%;
+}
+
+
+#tablematch { margin-bottom  : 20px; margin-top : 10px}
+
+#tablematch table
+{
+	border-collapse : collapse;
+	margin-top : 25px;	
+}
+#tablematch td
+{
+	border : 1px solid;
+	border-color  : #ccc;
+	text-align : center;
+	font-size : 12px;
+}
+
+#tablematch th
+{
+	border : 1px solid;
+	border-color  : #ccc;
+	font-size : 13px;
+	text-align : center;
+	background-color : #e7e7e7;
+
+}
+
+#printcorps { margin-left : 55px;margin-right : 55px; margin-top : 15px; font-size : 12px; }
+
+#printcorps h2
+{
+	font-family : Newspaper;
+	margin-bottom : 0px;
+	border-bottom : 1px solid black;
+}

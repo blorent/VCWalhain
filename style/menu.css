@@ -1,0 +1,99 @@
+#menu { height : 30px; width : 860px; background : #fff; margin : 0px 20px 0px 20px;}
+
+
+#menu ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+ }
+#menu ul li {
+     float: left;
+ }   
+
+a#index, a#equipes, a#pronos, a#contact, a#beach, a#liens, a#photos, a#forum {
+     display: block;
+     width: 90px;
+     height: 30px;
+ }  
+
+/* Style particulier pour le background des liens
+avec pour chacun : l'état inactif et actif */  
+
+a#index {
+     background: url(images/menu/accueil.gif) 0 0 no-repeat;
+}
+a#index:hover {
+     background: url(images/menu/accueil_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_index { background: url(images/menu/accueil_idle.gif) 0 0 no-repeat;}
+
+a#equipes {
+     background: url(images/menu/equipes.gif) 0 0 no-repeat;
+}
+a#equipes:hover {
+     background: url(images/menu/equipes_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_equipes { background: url(images/menu/equipes_idle.gif) 0 0 no-repeat;}
+
+a#pronos {
+     background: url(images/menu/pronos.gif) 0 0 no-repeat;
+}
+a#pronos:hover {
+     background: url(images/menu/pronos_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_pronos { background: url(images/menu/pronos_idle.gif) 0 0 no-repeat;}
+
+a#contact {
+     background: url(images/menu/contact.gif) 0 0 no-repeat;
+}
+a#contact:hover {
+     background: url(images/menu/contact_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_contact { background: url(images/menu/contact_idle.gif) 0 0 no-repeat;}
+
+a#liens {
+     background: url(images/menu/liens.gif) 0 0 no-repeat;
+}
+a#liens:hover {
+     background: url(images/menu/liens_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_liens { background: url(images/menu/liens_idle.gif) 0 0 no-repeat;}
+
+a#beach {
+     background: url(images/menu/beach.gif) 0 0 no-repeat;
+}
+a#beach:hover {
+     background: url(images/menu/beach_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_beach { background: url(images/menu/beach_idle.gif) 0 0 no-repeat;}
+
+a#photos {
+     background: url(images/menu/photos.gif) 0 0 no-repeat;
+}
+a#photos:hover {
+     background: url(images/menu/photos_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_photos { background: url(images/menu/photos_idle.gif) 0 0 no-repeat;}
+
+
+a#forum {
+     background: url(images/menu/forum.gif) 0 0 no-repeat;
+}
+a#forum:hover {
+     background: url(images/menu/forum_hover.gif) 0 0 no-repeat;
+}
+
+#menu a.current_forum { background: url(images/menu/forum_idle.gif) 0 0 no-repeat;}
+
+
+#menu fieldset{ float:left;display: block; width : 140px; height : 30px; background : #fff url('images/menu/search.gif') no-repeat; margin : 0; padding : 0; border :none;}
+
+#menu fieldset input { background : #fff; border-width : 0px; position : relative; top : 5px; left : 40px; width : 78px; height : 15px;}
+

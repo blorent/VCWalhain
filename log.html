@@ -1,0 +1,12 @@
+<?
+echo '<div id="login">';
+if ($membre==1) {
+include("connection.php");
+$sql = "SELECT id FROM `membres` WHERE `login`='".$_SESSION['login']."'";
+$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+$res = mysql_num_rows($req);
+$data = mysql_fetch_assoc($req);
+}
+if ($connected==1 && $membre==1) echo '<p><a href="edit.php?id='.$data['id'].'">Editer mes infos</a>&nbsp;-&nbsp;<a href="logout.php">Log out</a>&nbsp;&nbsp;&nbsp;</p></div>';
+else if($connected==1) echo '<p><a href="logout.php">Log out</a>&nbsp;&nbsp;&nbsp;</p></div>';
+else echo '<p><a href="login.php">Log in</a>&nbsp;&nbsp;&nbsp;</p></div>';?>
