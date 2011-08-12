@@ -806,17 +806,23 @@ $data = mysql_fetch_assoc($req);
 	if ($data['url_photo'] != '' && $data['url_photo'] != 'NC') echo '<img src="'.$data['url_photo'].'" />';
 	echo '<table><tr><td><p>Entraineur : '.$data['entraineur'].'</p>';
 	echo '<p><u>Composition</u></p><ul>';
-
-	$sql2 = "SELECT nom,prenom,id,equipe FROM `membres` WHERE `equipe`='".$data['division']."' ORDER BY `nom`";
-
-	$req2 = mysql_query($sql2) or die('Erreur SQL !<br>'.$sql2.'<br>'.mysql_error());
-
-	$res2 = mysql_num_rows($req2);
-
-	while($data2 = mysql_fetch_assoc($req2)) {
-
-		echo '<li><a href="membre.php?id='.$data2['id'].'">'.$data2['nom'].' '.$data2['prenom'].'</a></li>' ;
-
+	
+	if ($data['details_membres'] == 1)
+	{
+    	$sql2 = "SELECT nom,prenom,id,equipe FROM `membres` WHERE `equipe`='".$data['division']."' ORDER BY `nom`";
+	    $req2 = mysql_query($sql2) or die('Erreur SQL !<br>'.$sql2.'<br>'.mysql_error());
+	    $res2 = mysql_num_rows($req2);
+	    while($data2 = mysql_fetch_assoc($req2)) {
+		    echo '<li><a href="membre.php?id='.$data2['id'].'">'.$data2['nom'].' '.$data2['prenom'].'</a></li>' ;
+	    }
+	}
+	else
+	{
+	   $playerList = split(',',$data['liste_membres']);
+	   for ($i=0; $i<count($playerList); $i++)
+	   {
+	      echo "<li>$playerList[$i]</li>";
+	   }
 	}
 
 	if($data['entrainement1']!='NC') {
