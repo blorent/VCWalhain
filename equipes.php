@@ -66,44 +66,7 @@ while($data = mysql_fetch_assoc($req)) {
 	</ul>
 	<span class="corners-bottom"><span></span></span></div>
 	</div>
-<?if($admin==0){?>
-<div class="rightitem"><div class="inner">
-	<span class="corners-top"><span></span></span>
-			<div id="dujour">
-			<?
-			$re = mysql_query('SELECT MAX(id) as max from membres');          // 3
-			$data = mysql_fetch_assoc($re);
-			$idx = rand(1,$data['max']);
 
-			$sql = "SELECT * FROM `membres` WHERE `id`='".$idx."' AND `nom`!=''";
-			$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
-			$num_rows = mysql_num_rows($req);
-
-			while($num_rows != 1){
-				$idx = rand(1,$data['max']);
-				$sql = "SELECT * FROM `membres` WHERE `id`='".$idx."' AND `nom`!=''";
-				$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
-				$num_rows = mysql_num_rows($req);
-			}
-
-			$data = mysql_fetch_assoc($req);
-
-			if($data['nom']=='') {}
-			else {
-
-			if($data['photo']==1){
-				echo '<h1>Membre au hasard</h1><p><a href="membre.php?id='.$idx.'"><img src="photos/'.$idx.'.jpg" alt="photo membre" /></a></p>';
-			}
-			else {
-				echo '<h1>Membre au hasard</h1><p><a href="membre.php?id='.$idx.'"><img src="photos/null.jpg" alt="no photo" /></a></p>';
-			}
-			echo '<p><a href="membre.php?id='.$idx.'">'.$data['prenom'].' '.$data['nom'].'</a></p>';
-			}
-			?>
-			</div>
-	<span class="corners-bottom"><span></span></span></div>
-	</div>
-<?}?>
 
 
 </div> <!-- Fin Rightcol -->
@@ -832,7 +795,7 @@ mysql_close();
 <?
 include("connection.php");
 $i=0;
-if($_GET['eq']=='') $eq = 'N2DA'; else $eq = $_GET['eq'];
+if($_GET['eq']=='') $eq = 'N1H'; else $eq = $_GET['eq'];
 $sql = "SELECT * FROM `equipes` WHERE `division`='".$eq."'";
 $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 $data = mysql_fetch_assoc($req);

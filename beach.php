@@ -33,14 +33,14 @@ include('session.php');
 <p>Le VC Walhain met, pendant toute la saison d'&eacute;t&eacute;, deux terrains de beach-volley &agrave; la disposition de ses membres.</p>
 <p>Des manches du championnat provincial namurois ainsi que du championnat pro B y sont organis&eacute;es chaque ann&eacute;e, ainsi que de nombreux tournois non officiels.</p>
 
-	<h1>Photos</h1>
-<p>Vous pouvez retrouver les photos du Volley Club Walhain dans la section photos (y'a moyen de deviner...).</p>
+<h1>Photos</h1>
+<p>Vous pouvez retrouver les photos du Volley Club Walhain, notamment celles li&eacute;es au beach volley, dans la section photos.</p>
 </div>
 </div>
 <!-- Fin Contenu -->
 
 </div> <!-- fermeture de container -->
 <div id="bottombox"></div> <!-- hors du container car largeur plus grande -->
-<div id="footnote"><p>&copy; Volley Club Walhain 2008</p></div>
+<div id="footnote"><p>&copy; Volley Club Walhain <?php echo date('Y'); ?></p></div>
 </body>
 </html>
